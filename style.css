@@ -1,0 +1,55 @@
+body{
+    background-color: #d5e3ef;
+}
+
+/************
+    NAVBAR
+*************/
+
+.navbar{
+    background-color: #fff;
+}
+
+.navbar-nav .nav-link.active{
+    color:#7a57cd;
+}
+
+.navbar-nav .nav-link{
+    transition: all 0.2s ease-in-out;
+    color:#889fc9;
+}
+
+.navbar-nav .nav-link:hover{
+    transform: scale(1.05);
+}
+
+/**************
+    PORTFOLIO
+***************/
+
+.project-card{
+    transition: all 0.2s ease-in-out;
+}
+.project-card:hover{
+    transform: scale(0.95);
+    background-color: #eef4ff;
+}
+
+/***************
+    BS ELEMENTS
+****************/
+
+.btn-primary{
+    background-color:#7a57cd;
+    border-color: #5a3c9f;
+}
+
+.btn-primary:hover{
+    background-color:#5a3c9f;
+    border-color: #5a3c9f;
+}
+
+.card-footer{
+    border-top: none;
+    background-color: #eef4ff;
+} 
