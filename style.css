@@ -54,3 +54,8 @@ body{
     border-top: none;
     background-color: #eef4ff;
 } 
+
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(100%);
+}
