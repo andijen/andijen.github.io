@@ -15,12 +15,13 @@ body{
 }
 
 .navbar-nav .nav-link{
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color:#889fc9;
+    text-decoration: underline wavy 0.08em rgba(206, 213, 227, 0);
 }
 
 .navbar-nav .nav-link:hover{
-    transform: scale(1.05);
+    text-decoration-color: rgba(206, 213, 227, 1);
 }
 
 /**************
