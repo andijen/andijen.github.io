@@ -59,3 +59,8 @@ body{
 .carousel-control-prev{
     filter: invert(100%);
 }
+
+.list-group-item.active{
+    background-color:#7a57cd;
+    border-color: #5a3c9f;
+}
