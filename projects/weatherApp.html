@@ -37,46 +37,52 @@
         </nav>
     </header>
     <main>
-        <div class="container p-3 px-md-5">
-            <section class="card my-3 shadow border-0 sticky-md-top">
-                <div class="card-body text-center">
+        <div class="container">
+            <section class="card my-3 border-0" id="top">
+                <div class="card-body text-center px-md-5">
                     <h2 class="card-title">Weather App for Sailors</h2>
                     <p class="card-subtitle text-body-secondary fst-italic">React, HTML, CSS, JavaScript, Figma</p>
                     <p class="card-text">Group project for ECS522U Graphical User Interfaces at Queen Mary, University of London.</p>
                     <a href="../portfolio.html" class="btn btn-primary btn-sm">Back to Portfolio</a>
                 </div>
             </section>
-            <section class="card my-3 p-3 border-0">
-                <div class="row row-cols-md-2 g-0">
-                    <div class="col col-12 col-md-7">
-                        <div class="card-body">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col col-12 col-md-4">
+                    <aside class="card my-3 p-3 border-0 sticky-md-top">
+                        <h5 class="fst-italic">Contents</h5>
+                        <div class="list-group list-group-flush p-0" id="contents">
+                            <a class="list-group-item list-group-item-action" href="#top">(Top)</a>
+                            <a class="list-group-item list-group-item-action" href="#summary">Summary</a>
+                            <a class="list-group-item list-group-item-action" href="#design">Design</a>
+                            <a class="list-group-item list-group-item-action" href="#implementation">Implementation</a>
+                            <a class="list-group-item list-group-item-action" href="#evaluation">Evaluation</a>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col col-12 col-md-8" data-bs-spy="scroll" data-bs-target="#contents" data-bs-smooth-scroll="true" tabindex="0">
+                    <section class="card my-3 p-3 border-0" id="summary">
+                        <div class="card-body px-md-5">
                             <h3 class="card-title">Summary</h3>
                             <p class="card-text">This group project was for a module in my second year at QMUL Computer Science. We designed and developed a mobile-first web application tailored to sailors, providing live marine weather using Open-Meteo API. The project was divided into Design, Implementation, and Evaluation phases.</p>
+                            <img src="../files/images/weatherApp/WeatherAppReact.png" alt="" class="img-fluid rounded">
                         </div>
-                    </div>
-                    <div class="col col-12 col-md-5">
-                        <img src="../files/images/weatherApp/WeatherAppReact.png" alt="" class="img-fluid rounded">
-                    </div>
-                </div>
-            </section>
-            <section class="card my-3 p-3 border-0">
-                <div class="card-body">
-                    <h3 class="card-title">Design</h3>
-                    <p class="card-text">For this assignment, we had to create a weather application for use by a specific stakeholder. Our group decided on sailors as our primary stakeholder, as they depend on marine weather information in order to sail safely, so require very specialised applications.</p>
-                    <h4 class="card-subtitle">Analysis of Primary Stakeholder</h4>
-                    <p class="card-text">Sailors rely on both weather forecasts and live weather data to make informed decisions about their journey. Data such as wind speed/direction, wave height and tides are usually not present in most generalised weather apps, requiring sailors to go to various sources to access that information. Downloading data for future use is also key due to limited Internet access at sea.</p>
-                    <p class="card-text">I conducted an interview with a sailor, asking him what weather applications he currently used, the forcast information he valued the most before/during sailing, and his preference for data visualisations. We incorporated the aspects mentioned in this interview into our final design of our application.</p>
-                    <h4 class="card-subtitle">Analysis of Wider Stakeholders</h4>
-                    <p class="card-text">We also considered secondary and tertiary stakeholders that may be affected by our application. One secondary stakeholder includes companies that arrange boat trips require an application with detailed forecasts to prevent booking cancellations and ensure a safe journey. One teritary stakeholder would be coastguards, as they would want the application to have safety alerts so that less dangerous outings are taken to prevent incidents.</p>
-                    <h4 class="card-subtitle">Design Decisions</h4>
-                    <div class="row row-cols-md-2 my-1">
-                        <div class="col col-12 col-md-8">
+                    </section>
+                    <section class="card my-3 p-3 border-0" id="design">
+                        <div class="card-body px-md-5">
+                            <h3 class="card-title">Design</h3>
+                            <p class="card-text">For this assignment, we had to create a weather application for use by a specific stakeholder. Our group decided on sailors as our primary stakeholder, as they depend on marine weather information in order to sail safely, so require very specialised applications.</p>
+                            <h4 class="card-subtitle">Analysis of Primary Stakeholder</h4>
+                            <p class="card-text">Sailors rely on both weather forecasts and live weather data to make informed decisions about their journey. Data such as wind speed/direction, wave height and tides are usually not present in most generalised weather apps, requiring sailors to go to various sources to access that information. Downloading data for future use is also key due to limited Internet access at sea.</p>
+                            <p class="card-text">I conducted an interview with a sailor, asking him what weather applications he currently used, the forcast information he valued the most before/during sailing, and his preference for data visualisations. We incorporated the aspects mentioned in this interview into our final design of our application.</p>
+                            <h4 class="card-subtitle">Analysis of Wider Stakeholders</h4>
+                            <p class="card-text">We also considered secondary and tertiary stakeholders that may be affected by our application. One secondary stakeholder includes companies that arrange boat trips require an application with detailed forecasts to prevent booking cancellations and ensure a safe journey. One teritary stakeholder would be coastguards, as they would want the application to have safety alerts so that less dangerous outings are taken to prevent incidents.</p>
+                            
+                            <h4 class="card-subtitle">Design Decisions</h4>
                             <h5 class="card-subtitle mt-1">Intial Designs</h5>
                             <p class="card-text">I sketched out an intial design based on our research and stakeholder analysis. These first sketches establish the key features of the application: a simple interface focusing on mobile users, colour-coded warnings for weather conditions, and a map.</p>
                             <p class="card-text">The home page includes the user's location at the top, where they can either select their GPS location or type in a location. Below it, any urgent weather warnings or alerts, and the current weather data, shown as a list that can be scrolled through. The forecasts, current measurements and tide times were all separate screens that could be accessed via the bottom menu.</p>
                             <p class="card-text">The map page would use the user's current GPS location to be placed on a map, with live weather information displayed as an overlay. Each overlay represents different measurements such as rain and wind levels, that can be toggled on or off via a button in the corner. In this second sketch, I combined the current weather and tide pages — I would then go on to remove the separate forecast page too.</p>
-                        </div>
-                        <div class="col col-12 col-md-4">
+                            
                             <div class="carousel slide" id="sketchCarousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -97,17 +103,13 @@
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row row-cols-md-2 my-1">
-                        <div class="col col-12 col-md-8">
+
                             <h5 class="card-subtitle mt-1">Final Design</h5>
                             <p class="card-text">I created the final application's design in Figma. This design carried over many ideas from the initial designs, however the major change was to switch the weather information from rows to a grid layout. This allows for more information to be viewed at once, putting the important information front and centre.</p>
                             <p class="card-text">The bottom menu was also changed to include the settings (instead of having it be a floating action button), forecasts, warnings, and the map. A separation of current and future weather pages was replaced with each metric having its own page for forecasts when clicked on.</p>
                             <p class="card-text">Each metric is now a button that can be pressed to show a forecast over the next 24 hours and next 7 days. The buttons can be either neutral (blue) or one of 3 warning colours: green (safe), yellow (caution) and red (danger) to allow sailors to quickly assess how dangerous the weather conditions are in a given moment.</p>
                             <p class="card-text">The application is designed to be intuitive, with large, labelled buttons to improve ease of understanding and use.</p>
-                        </div>
-                        <div class="col col-12 col-md-4">
+
                             <div class="carousel slide" id="finalCarousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -129,78 +131,67 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="card my-3 p-3 border-0">
-                <div class="row row-cols-md-2 g-0">
-                    <div class="col col-12 col-md-7">
-                        <div class="card-body">
+                    </section>
+                    <section class="card my-3 p-3 border-0" id="implementation">
+                        <div class="card-body px-md-5">
                             <h3 class="card-title">Implementation</h3>
                             <p class="card-text">The application was developed using React, using Bootstrap for styling, Leaflet for maps, Chart.js for graphs, Axios for HTTP requests and jsPDF for PDF support. Our application uses Open-Meteo's APIs to access marine weather data and displays it to the user. Recent searches are also stored for easier access and user-selected weather forecasts can be downloaded in PDF format. In settings, the user can enter the size of their vessel so that warnings can be more accurate, as smaller vessels may be more affected by weather conditions compared to larger ones. There is also an option for dark mode and preferred temperature and wind speed units.</p>
-                        </div>
-                    </div>
-                    <div class="col col-12 col-md-5">
-                        <div class="carousel slide" id="reactCarousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="../files/images/weatherApp/WeatherAppReact.png" alt="" class="img-fluid rounded">
-                                    <p>Forecasts (home page), Settings, Map, Dark Mode</p>
+                             <div class="carousel slide" id="reactCarousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../files/images/weatherApp/WeatherAppReact.png" alt="" class="img-fluid rounded">
+                                        <p>Forecasts (home page), Settings, Map, Dark Mode</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../files/images/weatherApp/WeatherAppReactPDF.png" alt="" class="img-fluid rounded">
+                                        <p>PDF export</p>
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="../files/images/weatherApp/WeatherAppReactPDF.png" alt="" class="img-fluid rounded">
-                                    <p>PDF export</p>
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#reactCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#reactCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#reactCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#reactCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="card my-3 p-3 border-0">
-                <div class="row row-cols-md-2 g-0">
-                    <div class="col col-12 col-md-7">
-                        <div class="card-body">
+                    </section>
+                    <section class="card my-3 p-3 border-0" id="evaluation">
+                        <div class="card-body px-md-5">
                             <h3 class="card-title">Evaluation</h3>
                             <p class="card-text">Through this project I learnt how to use Figma and React, tools which I had no experience with prior. My experience with several other design applications allowed me to quickly adapt to Figma, however, it was a challenge to develop with the React framework for the first time. I was able to combine my existing Bootstrap knowledge since we made a web application with HTML/CSS/JS and my experience creating web pages. I learnt a lot about the non-technical challenges of software development as well — the importance of clearly-defined development plans, good teamwork, and flexible strategies to minimise risks.</p>
                             <p>As part of my evaluation, I designed an improvement to our map feature in Figma to make the map more useful to sailors. This includes the ability to track the user's course via GPS, display the current course on the map and view previous courses.</p>
-                        </div>
-                    </div>
-                    <div class="col col-12 col-md-5">
-                        <div class="carousel slide" id="evalCarousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="../files/images/weatherApp/WeatherAppEval1.png" alt="" class="img-fluid rounded">
-                                    <p>Updated map design with live tracking</p>
+
+                            <div class="carousel slide" id="evalCarousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../files/images/weatherApp/WeatherAppEval1.png" alt="" class="img-fluid rounded">
+                                        <p>Updated map design with live tracking</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../files/images/weatherApp/WeatherAppEval2.png" alt="" class="img-fluid rounded">
+                                        <p>Previous courses menu</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../files/images/weatherApp/WeatherAppEval3.png" alt="" class="img-fluid rounded">
+                                        <p>Previous course overlay</p>
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="../files/images/weatherApp/WeatherAppEval2.png" alt="" class="img-fluid rounded">
-                                    <p>Previous courses menu</p>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../files/images/weatherApp/WeatherAppEval3.png" alt="" class="img-fluid rounded">
-                                    <p>Previous course overlay</p>
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#evalCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#evalCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#evalCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#evalCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
-                    </div>
+                    </section>
                 </div>
-            </section>
+            </div>            
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
