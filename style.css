@@ -24,14 +24,15 @@ body{
     text-decoration-color: rgba(206, 213, 227, 1);
 }
 
-/**************
-    PORTFOLIO
-***************/
+/*********************
+    PORTFOLIO + BLOG 
+    ARTICLES
+**********************/
 
-.project-card{
+.article-card{
     transition: all 0.2s ease-in-out;
 }
-.project-card:hover{
+.article-card:hover{
     transform: scale(0.95);
     background-color: #eef4ff;
 }
